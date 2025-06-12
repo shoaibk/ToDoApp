@@ -1,6 +1,16 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
   <component name="VcsDirectoryMappings">
-    <mapping directory="$PROJECT_DIR$" vcs="Git" />
+    <mapping directory="" vcs="Git" />
+    <mapping directory="$PROJECT_DIR$/../../Assignment3" vcs="Git" />
+    <mapping directory="$PROJECT_DIR$/../../GridLayoutDemo" vcs="Git" />
+    <mapping directory="$PROJECT_DIR$/../../ToDoApp" vcs="Git" />
+    <mapping directory="$PROJECT_DIR$/../../ToDoAppFinal" vcs="Git" />
+    <mapping directory="$PROJECT_DIR$/../../W4InClassAssigment" vcs="Git" />
+    <mapping directory="$PROJECT_DIR$/../../assignment5/mslearn-dotnetmaui-mvvm1" vcs="Git" />
+    <mapping directory="$PROJECT_DIR$/../../characterCounterMVVM" vcs="Git" />
+    <mapping directory="$PROJECT_DIR$/../../data_binding_Assignment" vcs="Git" />
+    <mapping directory="$PROJECT_DIR$/../../git/W4InClassAssignments" vcs="Git" />
+    <mapping directory="$PROJECT_DIR$/../../w2InclassAssignment1" vcs="Git" />
   </component>
 </project>

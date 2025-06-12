@@ -1,0 +1,19 @@
+<?xml version="1.0" encoding="utf-8"?>
+
+<ContentPage xmlns="http://schemas.microsoft.com/dotnet/2021/maui"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             x:Class="ToDoAppMaui.views.RegisterPage">
+    <ContentPage.Content>
+        <StackLayout Margin="16">
+            <Label Text="Register"  Margin="16"/>
+            <Entry x:Name="EntryUsername" Placeholder="username"  Margin="16" Keyboard="Plain"/>
+            <Entry x:Name="EntryPassword" Placeholder="password"  Margin="16" IsPassword="True"/>
+            <Button
+                Text="Register"
+                HorizontalOptions="Fill"
+                Clicked="OnRegisterClicked"
+                Margin="16"
+                />
+        </StackLayout>
+    </ContentPage.Content>
+</ContentPage>
