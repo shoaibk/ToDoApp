@@ -1,0 +1,54 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage x:Class="ToDoAppMaui.MainPage"
+             xmlns="http://schemas.microsoft.com/dotnet/2021/maui"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             Title="ToDo App"
+             BackgroundColor="#F5F5F5">
+
+    <Grid>
+        <VerticalStackLayout Spacing="40" Padding="40" VerticalOptions="Center">
+            
+            <!-- app title -->
+            <Label 
+                Text="Welcome to ToDo App"
+                FontSize="28"
+                FontAttributes="Bold"
+                HorizontalOptions="Center"
+                TextColor="#2E7D32" />
+
+            <!-- sub heading -->
+            <Label 
+                Text="Choose an option to get started"
+                FontSize="16"
+                HorizontalOptions="Center"
+                TextColor="#666666"
+                Margin="0,0,0,20" />
+
+            <!-- register button -->
+            <Button 
+                x:Name="RegisterButton"
+                Text="Go to Registration"
+                Clicked="OnRegisterClicked"
+                BackgroundColor="#4CAF50"
+                TextColor="White"
+                FontSize="18"
+                HeightRequest="60"
+                CornerRadius="30"
+                Margin="20,0" />
+
+            <!-- login button -->
+            <Button 
+                x:Name="LoginButton"
+                Text="Go to Login"
+                Clicked="OnLoginClicked"
+                BackgroundColor="#2196F3"
+                TextColor="White"
+                FontSize="18"
+                HeightRequest="60"
+                CornerRadius="30"
+                Margin="20,0" />
+
+        </VerticalStackLayout>
+    </Grid>
+
+</ContentPage>
