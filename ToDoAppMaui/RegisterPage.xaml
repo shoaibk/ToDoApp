@@ -1,0 +1,12 @@
+<?xml version="1.0" encoding="utf-8"?>
+
+<ContentPage xmlns="http://schemas.microsoft.com/dotnet/2021/maui"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             x:Class="ToDoAppMaui.RegisterPage">
+    <VerticalStackLayout Padding="20" Spacing="20">
+        <Label Text="Register" HorizontalOptions="Center"></Label>
+        <Entry x:Name="userEntry" Placeholder="Username" Keyboard="Plain"/>
+        <Entry x:Name="passEntry" Placeholder="Password" IsPassword="true"/>
+        <Button Text="register" Clicked="RegisterClicked"/>
+    </VerticalStackLayout>
+</ContentPage>
