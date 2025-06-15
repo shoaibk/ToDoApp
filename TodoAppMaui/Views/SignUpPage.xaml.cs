@@ -1,10 +1,11 @@
+using System;
 using System.Net.Http;
 using System.Net.Http.Json;
 using Microsoft.Maui.Controls;
 
 namespace TodoAppMaui.Views
 {
-    // Define the User model here for local use
+    // Local user model
     public class User 
     {
         public string? Username { get; set; }
@@ -30,17 +31,16 @@ namespace TodoAppMaui.Views
 
             try
             {
-                var response = await httpClient.PostAsJsonAsync("http://10.0.2.2:5097/api/auth/register", user);
+                var response = await httpClient.PostAsJsonAsync("http://localhost:5097/api/auth/register", user);
 
                 if (response.IsSuccessStatusCode)
                 {
                     await DisplayAlert("Success", "Account created!", "OK");
-                    await Shell.Current.GoToAsync("//LoginPage");
+                    await Shell.Current.GoToAsync("//MainPage");
                 }
                 else
                 {
-                    var error = await response.Content.ReadAsStringAsync();
-                    await DisplayAlert("Signup Failed", error, "OK");
+                    await DisplayAlert("Signup Failed", "Please check your credentials and try again.", "OK");
                 }
             }
             catch (Exception ex)

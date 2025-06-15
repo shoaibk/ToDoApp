@@ -3,9 +3,9 @@ using System.Net.Http.Json;
 
 namespace TodoAppMaui.Views;
 
-public partial class LogInPage : ContentPage // <- FIXED name here
+public partial class LogInPage : ContentPage 
 {
-    public LogInPage() // <- FIXED constructor name
+    public LogInPage()
     {
         InitializeComponent(); 
     }
@@ -22,7 +22,7 @@ public partial class LogInPage : ContentPage // <- FIXED name here
 
         try
         {
-            var response = await httpClient.PostAsJsonAsync("http://10.0.2.2:5097/api/auth/login", user);
+            var response = await httpClient.PostAsJsonAsync("http://localhost:5097/api/auth/login", user);
 
             if (response.IsSuccessStatusCode)
             {
@@ -31,8 +31,7 @@ public partial class LogInPage : ContentPage // <- FIXED name here
             }
             else
             {
-                var error = await response.Content.ReadAsStringAsync();
-                await DisplayAlert("Login Failed", error, "OK");
+                await DisplayAlert("Login Failed", "Invalid username or password.", "OK");
             }
         }
         catch (Exception ex)
