@@ -1,0 +1,16 @@
+﻿
+Microsoft Visual Studio Solution File, Format Version 12.00
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "ToDoMaui", "ToDoMaui\ToDoMaui.csproj", "{DAA0CFCE-3EB9-490A-8C9E-A2D932A74C8B}"
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|Any CPU = Debug|Any CPU
+		Release|Any CPU = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{DAA0CFCE-3EB9-490A-8C9E-A2D932A74C8B}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{DAA0CFCE-3EB9-490A-8C9E-A2D932A74C8B}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{DAA0CFCE-3EB9-490A-8C9E-A2D932A74C8B}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{DAA0CFCE-3EB9-490A-8C9E-A2D932A74C8B}.Release|Any CPU.Build.0 = Release|Any CPU
+	EndGlobalSection
+EndGlobal
