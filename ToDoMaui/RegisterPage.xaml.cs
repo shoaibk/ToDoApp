@@ -12,4 +12,9 @@ public partial class RegisterPage : ContentPage
     {
         InitializeComponent();
     }
+    
+    private async void RegistrationController(object sender, EventArgs e)
+    {
+        Console.WriteLine("Pressed");
+    }
 }
