@@ -7,6 +7,14 @@
         <VerticalStackLayout
             Padding="30,0"
             Spacing="25">
+            <Entry
+                x:Name="UsernameRegEntry"
+                Placeholder="Username"
+                HorizontalOptions="Fill" />
+            <Entry
+                x:Name="PasswordRegEntry"
+                Placeholder="Password"
+                HorizontalOptions="Fill" />
             <Button
             x:Name="RegisterReqBtn"
             Text="Register" 

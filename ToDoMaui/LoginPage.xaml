@@ -4,6 +4,23 @@
              xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
              x:Class="ToDoMaui.LoginPage">
     <ContentPage.Content>
-        
+        <VerticalStackLayout
+            Padding="30,0"
+            Spacing="25">
+            <Entry
+                x:Name="UsernameLoginEntry"
+                Placeholder="Username"
+                HorizontalOptions="Fill" />
+            <Entry
+                x:Name="PasswordLoginEntry"
+                Placeholder="Password"
+                HorizontalOptions="Fill" />
+            <Button
+                x:Name="LoginReqBtn"
+                Text="Login" 
+                SemanticProperties.Hint="Register new Account"
+                Clicked="LoginController"
+                HorizontalOptions="Fill" />
+        </VerticalStackLayout>
     </ContentPage.Content>
 </ContentPage>
