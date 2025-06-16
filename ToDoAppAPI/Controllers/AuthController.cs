@@ -37,6 +37,6 @@ public class AuthController: ControllerBase
         
         if (userFromDb == null) return Unauthorized("Invalid username or password");
         
-        return Ok("Login successful");   
+        return Ok("Login successful");
     }
 }
