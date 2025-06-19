@@ -24,4 +24,19 @@ public partial class TodoListPage : ContentPage
         var todos = await _api.GetTodos(_user);
         todoList.ItemsSource = todos;
     }
+
+    private async void onAddClicked(object? sender, EventArgs e)
+    {
+        string title = toDoTitle.Text?.Trim();
+        var created = new Todo
+        {
+            Title = title,
+            IsCompleted = false
+        };
+        
+        var newToDo = await _api.AddTodo(_user, created);
+        LoadTodos();
+
+
+    }
 }
