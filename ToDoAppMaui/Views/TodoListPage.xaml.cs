@@ -1,8 +1,10 @@
 using System;
 using System.Collections.Generic;
 using System.Linq;
+using System.Net.Http.Json;
 using System.Text;
 using System.Threading.Tasks;
+using Microsoft.Maui.Controls;
 using ToDoAppMaui.Models;
 using ToDoAppMaui.Services;
 
@@ -23,5 +25,13 @@ public partial class TodoListPage : ContentPage
     {
         var todos = await _api.GetTodos(_user);
         todoList.ItemsSource = todos;
+    }
+
+    private async void  OnAddPressed(object? sender, EventArgs e)
+    {
+        var EntryToDo = entryToDo.Text;
+        var IsSuccessStatus = await _api.AddTodo(_user, new Todo(EntryToDo,false));
+        
+        LoadTodos();
     }
 }
