@@ -4,6 +4,9 @@
              xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
              x:Class="ToDoAppMaui.Views.TodoListPage">
     <VerticalStackLayout Spacing="30" Padding="30">
+        <Entry x:Name="searchToDo" Placeholder="ToDo List"/>
+
+        
         <CollectionView x:Name="todoList">
             <CollectionView.ItemTemplate>
                 <DataTemplate>
@@ -11,6 +14,6 @@
                 </DataTemplate>
             </CollectionView.ItemTemplate>
         </CollectionView>    
-        <Button Text="Add"/>
+        <Button Text="Add"  Clicked="AddClicked"/>
     </VerticalStackLayout>
 </ContentPage>
