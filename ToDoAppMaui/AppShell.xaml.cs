@@ -1,4 +1,6 @@
-﻿namespace ToDoAppMaui;
+﻿using Microsoft.Maui.Controls;
+
+namespace ToDoAppMaui;
 
 public partial class AppShell : Shell
 {

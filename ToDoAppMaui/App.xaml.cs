@@ -1,4 +1,9 @@
-﻿namespace ToDoAppMaui;
+﻿using Microsoft.Maui;
+using Microsoft.Maui.Controls;
+using Application = Microsoft.Maui.Controls.Application;
+
+
+namespace ToDoAppMaui;
 
 public partial class App : Application
 {
