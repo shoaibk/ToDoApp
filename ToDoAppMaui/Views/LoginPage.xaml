@@ -7,6 +7,5 @@
         <Entry x:Name="usernameEntry" Placeholder="Username" Keyboard="Plain"/>
         <Entry x:Name="passwordEntry" Placeholder="Password" IsPassword="True" />
         <Button Text="Login" Clicked="OnLoginClicked"/>
-        <Button Text="Test" />
     </VerticalStackLayout>
 </ContentPage>
