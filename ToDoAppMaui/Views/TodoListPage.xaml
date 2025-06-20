@@ -11,6 +11,7 @@
                 </DataTemplate>
             </CollectionView.ItemTemplate>
         </CollectionView>    
-        <Button Text="Add"/>
+        <Button Text="Add"
+                Clicked="OnAddClicked"/>
     </VerticalStackLayout>
 </ContentPage>

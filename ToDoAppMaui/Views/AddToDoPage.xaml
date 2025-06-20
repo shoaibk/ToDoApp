@@ -1,0 +1,23 @@
+<?xml version="1.0" encoding="utf-8"?>
+
+<ContentPage xmlns="http://schemas.microsoft.com/dotnet/2021/maui"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             x:Class="ToDoAppMaui.Views.AddToDoPage">
+    <ContentPage.Content>
+        <VerticalStackLayout Spacing="30" Padding="30">
+            <Entry
+                x:Name="TitleEntry"
+                Placeholder="Title here" />
+            
+            <HorizontalStackLayout>
+                <Label Text="Is Completed" />
+                <Switch x:Name="IsCompletedSwitch"
+                />
+            </HorizontalStackLayout>
+
+
+            <Button Text="Done"
+                    Clicked="OnDoneClicked"/>
+        </VerticalStackLayout>
+    </ContentPage.Content>
+</ContentPage>
