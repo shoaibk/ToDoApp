@@ -11,6 +11,7 @@
                 </DataTemplate>
             </CollectionView.ItemTemplate>
         </CollectionView>    
-        <Button Text="Add"/>
+        <Entry x:Name="todoEntry" Placeholder="Write your ToDo"/>
+        <Button Text="Add" Clicked="OnAddTodoClicked"/>
     </VerticalStackLayout>
 </ContentPage>
