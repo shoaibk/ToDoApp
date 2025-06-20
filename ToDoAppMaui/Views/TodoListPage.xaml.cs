@@ -35,7 +35,6 @@ public partial class TodoListPage : ContentPage
             await DisplayAlert("Error", "Todo title cannot be empty", "OK");
             return;
         }
-
         
         var todo = new Todo { Title = title, IsCompleted = false };
 
