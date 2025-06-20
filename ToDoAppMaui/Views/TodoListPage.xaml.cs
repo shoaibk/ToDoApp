@@ -37,6 +37,7 @@ public partial class TodoListPage : ContentPage
         var isCompleted = await _api.AddTodo(_user, newToDo);
         LoadTodos();
     }
+    
 }
 
 
