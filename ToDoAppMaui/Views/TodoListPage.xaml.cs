@@ -12,6 +12,7 @@ public partial class TodoListPage : ContentPage
 {
     private User _user;
     private ApiService _api = new();
+
     public TodoListPage(User user)
     {
         InitializeComponent();
@@ -24,4 +25,19 @@ public partial class TodoListPage : ContentPage
         var todos = await _api.GetTodos(_user);
         todoList.ItemsSource = todos;
     }
+
+    private async void OnAddTodoClicked(object? sender, EventArgs e)
+    {
+        var userText = todoEntry.Text;
+        var newToDo = new Todo
+        {
+            Title = userText,
+            IsCompleted = false
+        };
+        var isCompleted = await _api.AddTodo(_user, newToDo);
+        LoadTodos();
+    }
 }
+
+
+
