@@ -13,6 +13,7 @@
             </CollectionView.ItemTemplate>
         </CollectionView>
 
+        
         <Entry x:Name="todoEntry" Placeholder="Enter todo title" />
         <Button Text="Add Todo" Clicked="OnAddTodoClicked"/>
         

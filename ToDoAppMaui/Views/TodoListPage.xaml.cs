@@ -36,6 +36,7 @@ public partial class TodoListPage : ContentPage
             return;
         }
 
+        
         var todo = new Todo { Title = title, IsCompleted = false };
 
         var success = await _api.AddTodo(_user, todo);
