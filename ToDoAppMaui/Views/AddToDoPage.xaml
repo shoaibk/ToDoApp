@@ -1,0 +1,19 @@
+<?xml version="1.0" encoding="utf-8"?>
+
+<ContentPage xmlns="http://schemas.microsoft.com/dotnet/2021/maui"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             x:Class="ToDoAppMaui.Views.AddToDoPage">
+    <VerticalStackLayout Spacing="30" Padding="30">
+        
+        <Entry x:Name="todoInput" 
+               Placeholder="Enter todo name" 
+               FontSize="18"
+               Keyboard="Plain"
+               IsTextPredictionEnabled="False" />
+        
+        <Button Text="Save" 
+                TextColor="White"
+                Clicked="SaveClicked"/>
+        
+    </VerticalStackLayout>
+</ContentPage>

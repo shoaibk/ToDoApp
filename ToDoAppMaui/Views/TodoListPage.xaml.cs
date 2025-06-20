@@ -24,4 +24,10 @@ public partial class TodoListPage : ContentPage
         var todos = await _api.GetTodos(_user);
         todoList.ItemsSource = todos;
     }
+
+    private async void AddClicked(object sender, EventArgs e)
+    {
+        await Navigation.PushAsync(new AddToDoPage(_user));
+        await LoadTodos();
+    }
 }
