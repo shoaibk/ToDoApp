@@ -10,7 +10,11 @@
                     <Label Text="{Binding Title}" />
                 </DataTemplate>
             </CollectionView.ItemTemplate>
-        </CollectionView>    
-        <Button Text="Add"/>
+        </CollectionView>  
+        
+        <Button Text="Add" 
+                TextColor="White"
+                Clicked="AddClicked"/>
+        
     </VerticalStackLayout>
 </ContentPage>
