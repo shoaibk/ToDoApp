@@ -67,7 +67,7 @@
             </CollectionView.EmptyView>
         </CollectionView>
 
-        <!-- Add Button - 固定在底部 -->
+        <!-- Add Button - -->
         <Button Grid.Row="2"
                 x:Name="AddButton"
                 Text="Add Todo"
