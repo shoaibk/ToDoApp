@@ -1,11 +1,23 @@
 ﻿<?xml version="1.0" encoding="utf-8" ?>
 <ContentPage xmlns="http://schemas.microsoft.com/dotnet/2021/maui"
              xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
-             x:Class="ToDoAppMaui.MainPage">
+             x:Class="ToDoAppMaui.MainPage"
+             Title="ToDo App">
 
-    <VerticalStackLayout Spacing="30" Padding="30">
-        <Button Text="Go To Registration" Clicked="OnRegistrationClicked"/>
-        <Button Text="Go To Login" Clicked="OnLoginClicked" />
+    <VerticalStackLayout Spacing="30" Padding="30" VerticalOptions="Center">
+        
+        <Label 
+            Text="Welcome to ToDo App"
+            FontSize="24"
+            FontAttributes="Bold"
+            HorizontalOptions="Center" />
+
+        <Button Text="Go To Registration" 
+                Clicked="OnRegistrationClicked"/>
+                
+        <Button Text="Go To Login" 
+                Clicked="OnLoginClicked" />
+                
     </VerticalStackLayout>
 
 </ContentPage>

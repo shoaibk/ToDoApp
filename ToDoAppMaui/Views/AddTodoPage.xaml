@@ -1,0 +1,32 @@
+<?xml version="1.0" encoding="utf-8"?>
+<ContentPage xmlns="http://schemas.microsoft.com/dotnet/2021/maui"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             x:Class="ToDoAppMaui.Views.AddTodoPage"
+             Title="Add Todo">
+
+    <VerticalStackLayout Spacing="30" Padding="30" VerticalOptions="Center">
+        
+        <!-- Page Title -->
+        <Label Text="Add New Todo"
+               FontSize="20"
+               FontAttributes="Bold"
+               HorizontalOptions="Center" />
+
+        <!-- Todo Title Input -->
+        <Entry x:Name="TodoTitleEntry"
+               Placeholder="Enter todo title..."
+               MaxLength="200" />
+
+        <!-- Add Button -->
+        <Button x:Name="AddButton"
+                Text="Add Todo"
+                Clicked="OnAddTodoClicked" />
+
+        <!-- Cancel Button -->
+        <Button x:Name="CancelButton"
+                Text="Cancel"
+                Clicked="OnCancelClicked" />
+
+    </VerticalStackLayout>
+
+</ContentPage>
