@@ -11,6 +11,6 @@
                 </DataTemplate>
             </CollectionView.ItemTemplate>
         </CollectionView>    
-        <Button Text="Add"/>
+        <Button Text="Add New Todo" Clicked="OnAddTodoClicked" />
     </VerticalStackLayout>
 </ContentPage>
