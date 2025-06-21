@@ -19,7 +19,7 @@
                HorizontalOptions="Center"
                Margin="0,0,0,20" />
 
-        <!-- Todo List -->
+        
         <CollectionView Grid.Row="1" 
                         x:Name="TodoList">
             <CollectionView.ItemTemplate>
