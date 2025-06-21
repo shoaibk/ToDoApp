@@ -1,0 +1,9 @@
+<ContentPage xmlns="http://schemas.microsoft.com/dotnet/2021/maui"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             x:Class="ToDoAppMaui.Views.AddTodoPage"
+             Title="Add Todo">
+    <VerticalStackLayout Padding="30" Spacing="20">
+        <Entry x:Name="todoEntry" Placeholder="Enter your todo..." />
+        <Button Text="Submit" Clicked="OnSubmitClicked" BackgroundColor="Purple" TextColor="White"/>
+    </VerticalStackLayout>
+</ContentPage>
