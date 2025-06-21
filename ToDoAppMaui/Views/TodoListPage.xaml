@@ -2,10 +2,9 @@
 <ContentPage xmlns="http://schemas.microsoft.com/dotnet/2021/maui"
              xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
              x:Class="ToDoAppMaui.Views.TodoListPage"
-             Title="My Todos"
-             BackgroundColor="#F5F5F5">
+             Title="My Todos">
 
-    <Grid>
+    <Grid Padding="30">
         <Grid.RowDefinitions>
             <RowDefinition Height="Auto" />
             <RowDefinition Height="*" />
@@ -13,53 +12,44 @@
         </Grid.RowDefinitions>
 
         <!-- Header -->
-        <Label Grid.Row="0" 
+        <Label Grid.Row="0"
                Text="My Todo List"
-               FontSize="24"
+               FontSize="20"
                FontAttributes="Bold"
                HorizontalOptions="Center"
-               TextColor="#2E7D32"
-               Margin="20" />
+               Margin="0,0,0,20" />
 
         <!-- Todo List -->
         <CollectionView Grid.Row="1" 
-                        x:Name="TodoList"
-                        Margin="20,0">
+                        x:Name="TodoList">
             <CollectionView.ItemTemplate>
                 <DataTemplate>
-                    <Border BackgroundColor="White" 
-                            StrokeShape="RoundRectangle 10" 
-                            Margin="0,5" 
-                            Padding="15"
-                            Shadow="{Shadow Brush=Gray, Offset='2,2', Radius=4}">
-                        <Grid>
-                            <Grid.ColumnDefinitions>
-                                <ColumnDefinition Width="*" />
-                                <ColumnDefinition Width="Auto" />
-                            </Grid.ColumnDefinitions>
-                            
-                            <Label Grid.Column="0"
-                                   Text="{Binding Title}"
-                                   FontSize="16"
-                                   TextColor="Black"
-                                   VerticalOptions="Center" />
-                                   
-                            <Label Grid.Column="1"
-                                   FontSize="16"
-                                   VerticalOptions="Center">
-                                <Label.Triggers>
-                                    <DataTrigger TargetType="Label" Binding="{Binding IsCompleted}" Value="True">
-                                        <Setter Property="Text" Value="✓" />
-                                        <Setter Property="TextColor" Value="Green" />
-                                    </DataTrigger>
-                                    <DataTrigger TargetType="Label" Binding="{Binding IsCompleted}" Value="False">
-                                        <Setter Property="Text" Value="○" />
-                                        <Setter Property="TextColor" Value="Orange" />
-                                    </DataTrigger>
-                                </Label.Triggers>
-                            </Label>
-                        </Grid>
-                    </Border>
+                    <Grid Padding="10">
+                        <Grid.ColumnDefinitions>
+                            <ColumnDefinition Width="*" />
+                            <ColumnDefinition Width="Auto" />
+                        </Grid.ColumnDefinitions>
+                        
+                        <Label Grid.Column="0"
+                               Text="{Binding Title}"
+                               FontSize="16"
+                               VerticalOptions="Center" />
+                               
+                        <Label Grid.Column="1"
+                               FontSize="16"
+                               VerticalOptions="Center">
+                            <Label.Triggers>
+                                <DataTrigger TargetType="Label" Binding="{Binding IsCompleted}" Value="True">
+                                    <Setter Property="Text" Value="✓" />
+                                    <Setter Property="TextColor" Value="Green" />
+                                </DataTrigger>
+                                <DataTrigger TargetType="Label" Binding="{Binding IsCompleted}" Value="False">
+                                    <Setter Property="Text" Value="○" />
+                                    <Setter Property="TextColor" Value="Orange" />
+                                </DataTrigger>
+                            </Label.Triggers>
+                        </Label>
+                    </Grid>
                 </DataTemplate>
             </CollectionView.ItemTemplate>
             
@@ -67,29 +57,22 @@
             <CollectionView.EmptyView>
                 <StackLayout VerticalOptions="Center" HorizontalOptions="Center">
                     <Label Text="No todos yet!"
-                           FontSize="18"
-                           TextColor="#666666"
+                           FontSize="16"
                            HorizontalOptions="Center" />
                     <Label Text="Tap 'Add Todo' to get started"
                            FontSize="14"
-                           TextColor="#999999"
                            HorizontalOptions="Center"
-                           Margin="0,10,0,0" />
+                           Margin="0,5,0,0" />
                 </StackLayout>
             </CollectionView.EmptyView>
         </CollectionView>
 
-        <!-- Add Button -->
+        <!-- Add Button - 固定在底部 -->
         <Button Grid.Row="2"
                 x:Name="AddButton"
                 Text="Add Todo"
                 Clicked="OnAddTodoClicked"
-                BackgroundColor="#4CAF50"
-                TextColor="White"
-                FontSize="18"
-                HeightRequest="55"
-                CornerRadius="25"
-                Margin="20" />
+                Margin="0,20,0,0" />
 
     </Grid>
 
