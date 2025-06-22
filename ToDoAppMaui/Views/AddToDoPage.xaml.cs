@@ -1,11 +1,9 @@
 using ToDoAppMaui.Models;
 using ToDoAppMaui.Services;
-using Microsoft.Maui.Controls;
-using System;
 
 namespace ToDoAppMaui.Views;
 
-public partial class AddToDoPage : ContentPage
+public partial class AddToDoPage
 {
     private readonly User _user;
     private readonly ApiService _api = new();
@@ -18,36 +16,39 @@ public partial class AddToDoPage : ContentPage
 
     private async void OnAddTodoClicked(object sender, EventArgs e)
     {
-        string content = TodoEntry.Text;
+        string? content = TodoEntry?.Text.Trim();
 
+        // Null-check user fields even though models are non-nullable
         if (string.IsNullOrWhiteSpace(_user.Username) || string.IsNullOrWhiteSpace(_user.Password))
         {
             await DisplayAlert("Login Failed", "Username or password missing.", "OK");
             return;
         }
 
+        // Null-check todo content
         if (string.IsNullOrWhiteSpace(content))
         {
-            errLabel.Text = "Please enter text...";
-            errLabel.IsVisible = true;
+            ErrLabel.Text = "Please enter text...";
+            ErrLabel.IsVisible = true;
             return;
         }
 
         var newTodo = new Todo
         {
-            Title = content.Trim(),
+            Title = content,
             IsCompleted = false
         };
 
         var success = await _api.AddTodo(_user, newTodo);
+
         if (success)
         {
             await Navigation.PopAsync();
         }
         else
         {
-            errLabel.Text = "Todo service failed, please try again.";
-            errLabel.IsVisible = true;
+            ErrLabel.Text = "Todo service failed, please try again.";
+            ErrLabel.IsVisible = true;
         }
     }
 }

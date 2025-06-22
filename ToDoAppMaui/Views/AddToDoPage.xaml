@@ -5,7 +5,7 @@
              Title="Add Todo">
     <VerticalStackLayout Padding="18" Spacing="16">
         <Entry x:Name="TodoEntry" Placeholder="Making todo's can be fun!" />
-        <Label x:Name="errLabel" TextColor="Red" IsVisible="False" />
+        <Label x:Name="ErrLabel" TextColor="Red" IsVisible="False" />
         <Button Text="Add Todo Item" Clicked="OnAddTodoClicked"/>
     </VerticalStackLayout> 
 </ContentPage>

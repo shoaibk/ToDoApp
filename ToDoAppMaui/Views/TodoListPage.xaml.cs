@@ -1,12 +1,10 @@
 using ToDoAppMaui.Models;
 using ToDoAppMaui.Services;
-using Microsoft.Maui.Controls;
-using System;
-using System.Threading.Tasks;
+
 
 namespace ToDoAppMaui.Views;
 
-public partial class ToDoListPage : ContentPage
+public partial class ToDoListPage
 {
     private readonly User _user;
     private readonly ApiService _api = new();
