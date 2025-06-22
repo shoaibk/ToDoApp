@@ -1,7 +1,7 @@
 ﻿using ObjCRuntime;
 using UIKit;
 
-namespace TodoAppMaui;
+namespace ToDoAppMaui;
 
 public class Program
 {
