@@ -22,7 +22,7 @@ public partial class LoginPage : ContentPage
         var client = new HttpClient();
         var user = new User { Username = username, Password = password };
         var response = await client.PostAsJsonAsync("http://localhost:5097/api/auth/login", user);
-        if (response.IsSuccessStatusCode) await Navigation.PushAsync(new TodoListPage(user));
+        if (response.IsSuccessStatusCode) await Navigation.PushAsync(new ToDoListPage(user));
         else await DisplayAlert("Error", "Login failed", "OK");
     }
 }

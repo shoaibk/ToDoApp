@@ -1,8 +1,9 @@
-using ToDoAppMaui.Services;
 using ToDoAppMaui.Models;
+using ToDoAppMaui.Services;
+using Microsoft.Maui.Controls;
 using System;
 
-namespace TodoAppMaui.Views;
+namespace ToDoAppMaui.Views;
 
 public partial class AddToDoPage : ContentPage
 {
@@ -19,7 +20,13 @@ public partial class AddToDoPage : ContentPage
     {
         string content = TodoEntry.Text;
 
-        if (content == null || content.Trim() == "")
+        if (string.IsNullOrWhiteSpace(_user.Username) || string.IsNullOrWhiteSpace(_user.Password))
+        {
+            await DisplayAlert("Login Failed", "Username or password missing.", "OK");
+            return;
+        }
+
+        if (string.IsNullOrWhiteSpace(content))
         {
             errLabel.Text = "Please enter text...";
             errLabel.IsVisible = true;
