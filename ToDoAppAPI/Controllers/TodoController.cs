@@ -35,5 +35,21 @@ public class TodoController: ControllerBase
         _context.SaveChanges();
         return Ok(todo);
     }
+    
+    [HttpPut]
+    public IActionResult UpdateTodo([FromQuery] string username, [FromQuery] string password, [FromBody] Todo todo)
+    
+    {
+        var user = _context.Users.FirstOrDefault(x => x.Username == username && x.Password == password);
+        if (user == null) return Unauthorized("Invalid credentials");
 
+        var existing = _context.Todos.FirstOrDefault(x => x.Id == todo.Id && x.UserId == user.Id);
+        if (existing == null) return NotFound("Todo not found");
+
+        existing.Title = todo.Title;
+        existing.IsCompleted = todo.IsCompleted;
+
+        _context.SaveChanges();
+        return Ok(existing);
+    }
 }
