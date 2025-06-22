@@ -1,5 +1,4 @@
-﻿
-Microsoft Visual Studio Solution File, Format Version 12.00
+﻿Microsoft Visual Studio Solution File, Format Version 12.00
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "ToDoAppAPI", "ToDoAppAPI\ToDoAppAPI.csproj", "{D6E00294-79BF-4A84-962D-04D94E37BE9E}"
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "ToDoAppMaui", "ToDoAppMaui\ToDoAppMaui.csproj", "{B2A35921-5CF3-490F-BCE9-859BDF5B5A93}"
