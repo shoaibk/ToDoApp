@@ -64,4 +64,17 @@
         <PackageReference Include="Microsoft.Extensions.Logging.Debug" Version="9.0.0"/>
     </ItemGroup>
 
+    <ItemGroup>
+      <MauiXaml Update="Views\AddTodoPage.xaml">
+        <SubType>Designer</SubType>
+      </MauiXaml>
+    </ItemGroup>
+
+    <ItemGroup>
+      <Compile Update="Views\AddTodoPage.xaml.cs">
+        <DependentUpon>AddTodoPage.xaml</DependentUpon>
+        <SubType>Code</SubType>
+      </Compile>
+    </ItemGroup>
+
 </Project>
