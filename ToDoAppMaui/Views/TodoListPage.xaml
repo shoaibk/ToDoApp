@@ -1,16 +1,21 @@
 <?xml version="1.0" encoding="utf-8"?>
-
 <ContentPage xmlns="http://schemas.microsoft.com/dotnet/2021/maui"
              xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
-             x:Class="ToDoAppMaui.Views.TodoListPage">
+             x:Class="ToDoAppMaui.Views.TodoListPage"
+             Title="To Do List">
+
     <VerticalStackLayout Spacing="30" Padding="30">
         <CollectionView x:Name="todoList">
             <CollectionView.ItemTemplate>
                 <DataTemplate>
-                    <Label Text="{Binding Title}" />
+                    <HorizontalStackLayout VerticalOptions="Center" Spacing="10">
+                        <CheckBox IsChecked="{Binding IsCompleted}" IsEnabled="True" VerticalOptions="Center"/>
+                        <Label Text="{Binding Title}" FontAttributes="Bold" VerticalOptions="Center"/>
+                    </HorizontalStackLayout>
                 </DataTemplate>
             </CollectionView.ItemTemplate>
-        </CollectionView>    
-        <Button Text="Add"/>
+        </CollectionView> 
+
+        <Button Text="Add" Clicked="OnAddClicked"/>
     </VerticalStackLayout>
 </ContentPage>
