@@ -41,8 +41,7 @@ public partial class AddTodoPage : ContentPage
             await DisplayAlert("Error", "Todo title cannot be empty!", "OK");
             return;
         }
-
-        // Create new todo object
+        
         var newTodo = new Todo
         {
             Title = todoTitle,
@@ -63,7 +62,6 @@ public partial class AddTodoPage : ContentPage
 
     private async void OnCancelClicked(object sender, EventArgs e)
     {
-        // Go back to todo list without adding
         await Shell.Current.GoToAsync("..");
     }
 }
