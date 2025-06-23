@@ -24,4 +24,17 @@ public partial class TodoListPage : ContentPage
         var todos = await _api.GetTodos(_user);
         todoList.ItemsSource = todos;
     }
+
+    private async void OnAddClicked(object sender, EventArgs e)
+    {
+        AddTodoPage.CurrentUser = _user;
+        await Shell.Current.GoToAsync("addtodo");
+    }
+
+    protected override async void OnAppearing()
+    {
+        base.OnAppearing();
+        await LoadTodos();
+    }
+    
 }
