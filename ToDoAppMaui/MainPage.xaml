@@ -1,38 +1,11 @@
 ﻿<?xml version="1.0" encoding="utf-8" ?>
 <ContentPage xmlns="http://schemas.microsoft.com/dotnet/2021/maui"
              xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
-             x:Class="ToDoAppMaui.MainPage"
-             Title="Home">
+             x:Class="ToDoAppMaui.MainPage">
 
-    <ScrollView>
-        <VerticalStackLayout
-            Padding="30,50"
-            Spacing="25"
-            VerticalOptions="Center">
+    <VerticalStackLayout Spacing="30" Padding="30">
+        <Button Text="Go To Registration" Clicked="OnRegistrationClicked"/>
+        <Button Text="Go To Login" Clicked="OnLoginClicked" />
+    </VerticalStackLayout>
 
-            <!-- App Title -->
-            <Label
-                Text="Welcome to ToDo App"
-                Style="{StaticResource Headline}"
-                SemanticProperties.HeadingLevel="Level1"
-                HorizontalOptions="Center" />
-
-            <!-- Registration Button -->
-            <Button
-                Text="Go To Registration"
-                Clicked="OnGoToRegistrationClicked"
-                CornerRadius="10"
-                HeightRequest="50"
-                HorizontalOptions="Fill" />
-
-            <!-- Login Button -->
-            <Button
-                Text="Go To Login"
-                Clicked="OnGoToLoginClicked"
-                CornerRadius="10"
-                HeightRequest="50"
-                HorizontalOptions="Fill" />
-
-        </VerticalStackLayout>
-    </ScrollView>
 </ContentPage>
