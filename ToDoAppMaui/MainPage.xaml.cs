@@ -1,4 +1,6 @@
-﻿using ToDoAppMaui.Views;
+﻿using System;
+using Microsoft.Maui.Controls;
+using ToDoAppMaui.Views;
 
 namespace ToDoAppMaui;
 
