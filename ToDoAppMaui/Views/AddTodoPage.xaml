@@ -1,0 +1,19 @@
+<?xml version="1.0" encoding="utf-8"?>
+
+<ContentPage xmlns="http://schemas.microsoft.com/dotnet/2021/maui"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             x:Class="ToDoAppMaui.Views.AddTodoPage"
+             Title="Add Todo">
+    
+    <VerticalStackLayout Padding="20">
+        <Entry x:Name="TodoEntry" Placeholder="Enter item"/>
+        
+        <HorizontalStackLayout Spacing="10">
+            <CheckBox x:Name="IsCompleteCheckbox"/>
+            <Label Text="Completed" VerticalOptions="Center"/>
+        </HorizontalStackLayout>
+        
+        <Button Text="Add Todo" Clicked="OnAddClicked"/>    
+        
+    </VerticalStackLayout>
+</ContentPage>
