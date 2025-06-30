@@ -12,6 +12,7 @@ public partial class TodoListPage : ContentPage
 {
     private User _user;
     private ApiService _api = new();
+    
     public TodoListPage(User user)
     {
         InitializeComponent();
@@ -21,7 +22,25 @@ public partial class TodoListPage : ContentPage
 
     private async Task LoadTodos()
     {
-        var todos = await _api.GetTodos(_user);
-        todoList.ItemsSource = todos;
+        try
+        {
+            var todos = await _api.GetTodos(_user);
+            todoList.ItemsSource = todos;
+        }
+        catch (Exception ex)
+        {
+            await DisplayAlert("Error", $"Failed to load todos: {ex.Message}", "OK");
+        }
+    }
+
+    private async void OnAddClicked(object? sender, EventArgs e)
+    {
+        await Navigation.PushAsync(new AddTodoPage(_user));
+    }
+
+    protected override async void OnAppearing()
+    {
+        base.OnAppearing();
+        await LoadTodos();
     }
 }

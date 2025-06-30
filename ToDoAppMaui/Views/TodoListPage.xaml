@@ -2,15 +2,23 @@
 
 <ContentPage xmlns="http://schemas.microsoft.com/dotnet/2021/maui"
              xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
-             x:Class="ToDoAppMaui.Views.TodoListPage">
+             x:Class="ToDoAppMaui.Views.TodoListPage"
+             Title="My Todos">
     <VerticalStackLayout Spacing="30" Padding="30">
         <CollectionView x:Name="todoList">
             <CollectionView.ItemTemplate>
                 <DataTemplate>
-                    <Label Text="{Binding Title}" />
+                    <Grid Padding="10" RowDefinitions="Auto">
+                        <Label Text="{Binding Title}" 
+                               FontSize="16"
+                               VerticalOptions="Center"/>
+                    </Grid>
                 </DataTemplate>
             </CollectionView.ItemTemplate>
         </CollectionView>    
-        <Button Text="Add"/>
+        <Button Text="Add Todo" 
+                Clicked="OnAddClicked"
+                BackgroundColor="Blue"
+                TextColor="White"/>
     </VerticalStackLayout>
 </ContentPage>
