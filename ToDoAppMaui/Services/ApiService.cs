@@ -5,7 +5,7 @@ namespace ToDoAppMaui.Services;
 
 public class ApiService
 {
-    private HttpClient _httpClient = new HttpClient();
+    private static readonly HttpClient _httpClient = new();
 
     public async Task<List<Todo>> GetTodos(User user)
     {

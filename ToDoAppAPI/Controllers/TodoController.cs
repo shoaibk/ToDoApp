@@ -30,6 +30,10 @@ public class TodoController: ControllerBase
         var user = _context.Users.FirstOrDefault(x => x.Username == username && x.Password == password);
         if (user == null) return Unauthorized("Invalid credentials");
 
+        var trimmed = (todo.Title ?? string.Empty).Trim();
+        if (string.IsNullOrWhiteSpace(trimmed)) return BadRequest("Title cannot be empty");
+
+        todo.Title = trimmed;
         todo.UserId = user.Id;
         _context.Todos.Add(todo);
         _context.SaveChanges();

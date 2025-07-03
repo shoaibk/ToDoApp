@@ -4,13 +4,18 @@
              xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
              x:Class="ToDoAppMaui.Views.TodoListPage">
     <VerticalStackLayout Spacing="30" Padding="30">
-        <CollectionView x:Name="todoList">
-            <CollectionView.ItemTemplate>
-                <DataTemplate>
-                    <Label Text="{Binding Title}" />
-                </DataTemplate>
-            </CollectionView.ItemTemplate>
-        </CollectionView>    
-        <Button Text="Add"/>
+        <RefreshView IsRefreshing="{Binding IsBusy}"
+                     Command="{Binding LoadCommand}">
+            <CollectionView x:Name="todoList">
+                <CollectionView.ItemTemplate>
+                    <DataTemplate>
+                        <Label Text="{Binding Title}" />
+                    </DataTemplate>
+                </CollectionView.ItemTemplate>
+            </CollectionView>
+        </RefreshView>
+
+        <Button Text="Add"
+                Clicked="OnAddClicked"/>
     </VerticalStackLayout>
 </ContentPage>
